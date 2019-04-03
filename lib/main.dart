@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return Container(
       child: MaterialApp(
         title: '百姓生活家',
-        debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,  //去掉右上角debug
         theme: ThemeData(
           primaryColor: Colors.pink
         ),

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';  //纸墨风格
+import 'package:flutter/cupertino.dart';  //ios类风格
 import 'cart_page.dart';
 import 'category_page.dart';
 import 'home_page.dart';
@@ -14,7 +14,7 @@ class IndexPage extends StatefulWidget {
 }
 
 class _IndexPageState extends State<IndexPage> {
-  final List<BottomNavigationBarItem> bottomTabs = [
+  final List<BottomNavigationBarItem> bottomTabs = [  //定义底部栏
     BottomNavigationBarItem(
       icon: Icon(
         CupertinoIcons.home
@@ -42,7 +42,7 @@ class _IndexPageState extends State<IndexPage> {
     )
   ];
 
-  final List tabBodises = [
+  final List tabBodises = [   //定义页面列表
      HomePage(),
      CategoryPage(),
      CartPage(),
@@ -50,7 +50,7 @@ class _IndexPageState extends State<IndexPage> {
 
   ];
 
-  int curentIndex = 0;
+  int curentIndex = 0;  //定义索引当前数组下标
   var currentPage;
 
   @override
@@ -63,9 +63,9 @@ class _IndexPageState extends State<IndexPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(244, 245, 245, 1.0),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(      //放到底部
         type: BottomNavigationBarType.fixed,
-        currentIndex: curentIndex,
+        currentIndex: curentIndex,    //切换选中
         items: bottomTabs,
         onTap: (index){
             setState(() {
